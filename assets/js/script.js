@@ -1,14 +1,38 @@
-var YOUR_API_KEY = emiNrDQSin0iMr+zUqMffA==QW7Bq8o94O42es2y
+var apiKey = "kiXeCA7mju1aj5ELXKhqpFu2BsA3SvXljqdqFaNx"
 
-const request = require('request');
+let options = {
+    method: 'GET',
+    headers: {
+        'x-api-key': apiKey
+    }
+}
 
-request.get({
-  url: 'https://api.api-ninjas.com/v1/country?name=United States',
-  headers: {
-    'X-Api-Key': 'YOUR_API_KEY'
-  },
-}, function(error, response, body) {
-  if(error) return console.error('Request failed:', error);
-  else if(response.statusCode != 200) return console.error('Error:', response.statusCode, body.toString('utf8'));
-  else console.log(body)
-});
+let url = 'https://api.api-ninjas.com/v1/country?name=united+states'
+
+
+fetch(url, options)
+    .then(res => res.json()) // parse response as JSON
+    .then(data => {
+        console.log(data)
+    })
+    .catch(err => {
+        console.log(`error ${err}`)
+    });
+
+
+    
+let options1= {
+    method: 'GET',
+}
+
+let url1 = 'http://www.omdbapi.com/?apikey=b0f2dca4&t=john+wick'
+
+
+fetch(url1, options1)
+    .then(res => res.json()) // parse response as JSON
+    .then(data => {
+        console.log(data)
+    })
+    .catch(err => {
+        console.log(`error ${err}`)
+    });
