@@ -10,7 +10,7 @@
 | Technology Used         | Resource URL           | 
 | ------------- |:-------------:| 
 API key: https://api-ninjas.com/api/country
-
+Bulma info: https://bulma.io/documentation/columns/responsiveness/
 
 
 
