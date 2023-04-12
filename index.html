@@ -9,30 +9,50 @@
 </head>
 
 <body>
+    <!--Box at the top with app title and statement/directions-->
     <header>
-        <h1 class="title col">The Dirty Dozen: </h1>
+        <h1 id="title col">The Dirty Dozen: </h1>
         <p id="title-description">12 Random Facts About the Country Your Movie was Filmed In</p>
     </header>
 
+    <!--Big box that has everything under title in it-->
     <main class="container">
-        <aside id="left-side" class="left-side">
-            <h2>ENTER MOVIE TITLE HERE:</h2>
+
+        <!--Container of everything to the left on the screen at full size--> with the search button and list of previously searched titles-->
+        <aside id="left-side" class="col-12 col-md-4">
+            <!--Box with the search button-->
+            <h2 id="enterMovie">ENTER MOVIE TITLE HERE:</h2>
             <input id="movieTitle" class="movieTitle"></input>
             <button id="searchBtn" type="button" class="btn btn-block">SEARCH</button>
+
             <hr>
 
+            <!--Box with the list of previously viewed titles-->
             <div>
+                <h2 id="prevTitles">Previously chosen titles:</h2>
                 <ul id="movie-title-container" class="btn btn-block"></ul>
             </div>
-
-
         </aside>
 
-
-
-
-
-
+        <!--Everything to the right on the screen at full size. Will nest under boxes to the right when screen shrinks/mobile phone use -->
+        <div class="right-side col-8 flex-d justify-content-space-between">
+            <section id="movie-country-facts" class="col-12 col-md-8">
+                <h2 id="country-facts">12 Random Facts About: </h2>
+                <p id="country-name"></p>
+                <p id="capital">1. Capital: </p>
+                <p id="population">2. Population: </p>
+                <p id="currency">3. Currency: </p>
+                <p id="unemployment">4. Unemployment: </p>
+                <p id="fertility">5. Fertility Rate:</p>
+                <p id="infant-mortality">6. Infant Mortality: </p>
+                <p id="women-in-college">7. Women Enrolled in Secondary Education: </p>
+                <p id="men-in-college">8. Men Enrolled in Secondary Education: </p>
+                <p id="forested-area">9. Forested Area: </p>
+                <p id="threatened-species">10. Threatened Species: </p>
+                <p id="life-expectancy-female">11. Life Expectancy Female: </p>
+                <p id="life-expectancy-male">12. Life Expectancy Male: </p>
+            </section>
+        </div>
 
     </main>
 </body>
