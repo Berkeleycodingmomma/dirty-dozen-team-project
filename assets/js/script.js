@@ -47,7 +47,47 @@ $(".btn").on("click", function (event){
 })
 
 
+$('.search').on("click", function (event) {
+	event.preventDefault();
+	city = $(this).parent('.btnPar').siblings('.textVal').val().trim();
+	if (city === "") {
+		return;
+	};
+	cityHist.push(city);
 
+	localStorage.setItem('city', JSON.stringify(cityHist));
+	fiveForecastEl.empty();
+	getHistory();
+	getWeatherToday();
+});
+
+var contHistEl = $('.cityHist');
+
+function getHistory() {
+	contHistEl.empty();
+
+	for (let i = 0; i < cityHist.length; i++) {
+
+		var rowEl = $('<row>');
+		var btnEl = $('<button>').text(`${cityHist[i]}`)
+
+		rowEl.addClass('row histBtnRow');
+		btnEl.addClass('btn btn-outline-secondary histBtn');
+		btnEl.attr('type', 'button');
+
+		contHistEl.prepend(rowEl);
+		rowEl.append(btnEl);
+	}
+	if (!city) {
+		return;
+	}
+	$('.histBtn').on("click", function (event) {
+		event.preventDefault();
+		city = $(this).text();
+		fiveForecastEl.empty();
+		getWeatherToday();
+	});
+};
 
 // // var startPage = function () {
 // //     $("#movie-country-facts").hide()
