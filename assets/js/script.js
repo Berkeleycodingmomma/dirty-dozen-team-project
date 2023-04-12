@@ -7,6 +7,7 @@ $('.btn').on("click", function (event) {
     event.preventDefault();
     var title = $("#movieTitle").val();
    findTitle(title)
+   play();
 });
 
 
