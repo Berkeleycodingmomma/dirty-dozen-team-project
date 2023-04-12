@@ -19,16 +19,17 @@ let options = {
 
 let findTitle=function(title) {
 console.log(title)
+
 //let url = 'https://api.api-ninjas.com/v1/country?name=united+states'
-let url = 'https://api.api-ninjas.com/v1/country?name=united+states'
-fetch(url, options)
-    .then(res => res.json()) // parse response as JSON
-    .then(data => {
-        console.log(data)
-    })
-    .catch(err => {
-        console.log(`error ${err}`)
-    });  
+// let url = 'https://api.api-ninjas.com/v1/country?name=united+states'
+// fetch(url, options)
+//     .then(res => res.json()) // parse response as JSON
+//     .then(data => {
+//         console.log(data)
+//     })
+//     .catch(err => {
+//         console.log(`error ${err}`)
+//     });  
 let options1= {
     method: 'GET',
 }
@@ -40,18 +41,31 @@ console.log(getMovie);
 fetch(getMovie, options1)
     .then(res => res.json()) // parse response as JSON
     .then(data => {
-        console.log(data)
+        console.log(data);
+        let country = data.Country
+        console.log(country);
+        let url = `https://api.api-ninjas.com/v1/country?name=${country.replaceAll(" ", "+")}`
+        fetch(url, options)
+            .then(res => res.json()) // parse response as JSON
+            .then(data => {
+                console.log(data)
+            })
+            .catch(err => {
+                console.log(`error ${err}`)
+            });  
     })
     .catch(err => {
         console.log(`error ${err}`)
-    })
+    }) 
     
     // .then(function (data) {
-    //     let country = data[0]
+    //     let country = object.data('country')
     //     console.log(country)
-    // })
+    //  })
 
 }
+
+
 
 // var startPage = function () {
 //     $("#movie-country-facts").hide()
