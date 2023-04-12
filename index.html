@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- <link rel="stylesheet" target="_blank" rel="noopener"
+        href="https://cdn.jsdelivr.net/npm/Bulma@0.9.1/css/Bulma.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"> -->
+    <!-- <script src="./assets/node_modules/bulma/bulma.sass"></script> -->
     <script src="./assets/anime-master/lib/anime.min.js"></script>
     <title>Dirty Dozen</title>
 </head>
 
 <body>
     <!--Box at the top with app title and statement/directions-->
+
     <header>
         <h1 id="title col">The Dirty Dozen: </h1>
         <p id="title-description">12 Random Facts About the Country Your Movie was Filmed In</p>
@@ -19,12 +26,13 @@
     <!--Big box that has everything under title in it-->
     <main class="container">
 
-        <!--Container of everything to the left on the screen at full size--> with the search button and list of previously searched titles-->
+        <!--Container of everything to the left on the screen at full size with the search button and list of
+        previously searched titles-->
         <aside id="left-side" class="col-12 col-md-4">
             <!--Box with the search button-->
             <h2 id="enterMovie">ENTER MOVIE TITLE HERE:</h2>
             <input type="text" id="movieTitle" class="movieTitle"></input>
-            <button id="searchBtn" type="button" class="btn btn-block">SEARCH</button>
+            <button id="searchBtn" type="button" class="btn">SEARCH</button>
 
             <hr>
 
@@ -37,8 +45,14 @@
 
         <!--Everything to the right on the screen at full size. Will nest under boxes to the right when screen shrinks/mobile phone use -->
         <div class="right-side col-8 flex-d justify-content-space-between">
+
+
             <section id="movie-country-facts" class="col-12 col-md-8">
-                <h2 id="country-facts">12 Random Facts About: </h2>
+
+                <h2 id="country-facts, has-text-centered-aligned">12 Random Facts About: </h2>
+
+                <!-- has-text-centered-aligned -->
+
                 <p id="country-name"></p>
                 <p id="capital">1. Capital: </p>
                 <p id="population">2. Population: </p>
@@ -63,4 +77,21 @@
 
 </html>
 
+<!-- 
+<body class="has-text-centered">
+    <h1 class="is-size-2 has-text-success">
+        GeeksforGeeks
+    </h1>
+    <b>Bulma Responsive Size </b>
+    <br>
+    <div class="container">
 
+        <p class="is-size-4-mobile">GeeksforGeeks</p>
+        <p class="is-size-4-touch">GeeksforGeeks</p>
+        <p class="is-size-4-tablet">GeeksforGeeks</p>
+        <p class="is-size-4-desktop">GeeksforGeeks</p>
+        <p class="is-size-4-widescreen">GeeksforGeeks</p>
+        <p class="is-size-4-fullhd">GeeksforGeeks</p>
+
+    </div> -->
+</body>
