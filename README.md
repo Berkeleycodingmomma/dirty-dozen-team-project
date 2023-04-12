@@ -11,6 +11,7 @@
 | ------------- |:-------------:| 
 API key: https://api-ninjas.com/api/country
 Bulma info: https://bulma.io/documentation/columns/responsiveness/
+background img: https://depositphotos.com/stock-photos/cinema-background.html
 
 
 
