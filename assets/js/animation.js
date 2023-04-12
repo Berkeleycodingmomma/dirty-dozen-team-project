@@ -3,15 +3,15 @@ var factsElement = document.getElementsByClassName("right-side col-8 flex-d just
 
 anime({
   targets: elements,
-  translateX: 650,
+  translateX: 550,
   easing: 'linear',
   duration: 3000
 });
 
 anime({
     targets: factsElement,
-    translateX: 270,
-    delay: anime.stagger(100) // increase delay by 100ms for each elements.
+    translateX: 350,
+    delay: anime.stagger(300) // increase delay by 100ms for each elements.
 });
 
 function play() {
