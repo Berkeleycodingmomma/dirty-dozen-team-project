@@ -98,6 +98,7 @@ $("#movie-title-container").on("click", function (event) {
     var title = $("#movieTitle").val();
    findTitle(title)
    play();
+   //play();
 });
 
 // //When application opens or screen is refreshed, it will clear previous search & corresponding list, and show buttons for previous titles searched
