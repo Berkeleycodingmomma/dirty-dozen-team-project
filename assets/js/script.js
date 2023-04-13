@@ -83,10 +83,10 @@ $("#searchBtn").on("click" || "search", function(event) {
         buttonMovieList.append(appendedButton)
         titleString.push(movieName)
         localStorage.setItem("titleString", JSON.stringify(titleString));
-        findTitle();//this is not working 
-// //         //???????WHAT DO I PUT HERE TO GET IT TO RE-FETCH THAT MOVIES INFORMATION?????
-   }
- });
+        findTitle(movieName)//this is not working 
+//         //???????WHAT DO I PUT HERE TO GET IT TO RE-FETCH THAT MOVIES INFORMATION?????
+    }
+});
 
 //when I click any button it will get the list of 12
 $('.btn').on("click", function (event) {
