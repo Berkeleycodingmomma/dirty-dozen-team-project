@@ -25,6 +25,7 @@ body {
     font-family: fantasy;
     font-size: 20px;
 }
+
 #movieName {
     margin-left: 10px;
     width: 50%;
@@ -35,10 +36,12 @@ h2 {
     font-family: fantasy;
     font-weight: bold;
 }
+
 ul {
     margin-right: 30px;
     font-family: fantasy;
 }
+
 li.btn {
     width: 15%;
     display: block;
@@ -50,7 +53,7 @@ li.btn {
     color: white;
     font-family: fantasy;
     font-size: 30px;
-} 
+}
 
 li::marker {
     display: none;
