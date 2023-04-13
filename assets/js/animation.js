@@ -15,6 +15,6 @@ anime({
 });
 
 function play() {
-    var audio = new Audio('./assets/cacaw.mp3');
+    var audio = new Audio('./assets/oh-yeah.mp3');
     audio.play();
   }
