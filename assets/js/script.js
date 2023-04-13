@@ -1,9 +1,9 @@
-//Test that our APIs work. Will remove once js working
 var buttonMovieList=$("#movie-title-container")
 var input=document.getElementById("#movieTitle");
 var apiKey = "kiXeCA7mju1aj5ELXKhqpFu2BsA3SvXljqdqFaNx"
 let countryData = [];
 let country;
+let appendedButton;
 
 //Needed for call to Ninja API
 let options = {
@@ -29,9 +29,8 @@ let options1= {
             //specify we want "country"
             country = data.Country
             console.log(country);
-        //add "country" value to call to api ninja
 
-        
+        //add "country" value to call to api ninja   
     let getCountry = `https://api.api-ninjas.com/v1/country?name=${country.replaceAll(" ", "+")}`
     fetch(getCountry, options)
         .then(res => res.json()) // parse response as JSON
@@ -78,9 +77,9 @@ $("#searchBtn").on("click" || "search", function(event) {
         alert ("REPLACE THIS ALERT WITH A MODAL.")
         //this needs to be replaced with a modal//
     }else {
-        var appendedButton=$(("<li></li>"))
+        appendedButton=$(("<li></li>"))
         appendedButton.text(movieName)
-        appendedButton.attr("id", movieName)
+        appendedButton.attr("id", "movieName")
         appendedButton.addClass("movie btn btn-block")
         buttonMovieList.append(appendedButton)
         titleString.push(movieName)
@@ -91,14 +90,17 @@ $("#searchBtn").on("click" || "search", function(event) {
 });
 
 //when I click any button it will get the list of 12
-$('.btn').on("click", function (event) {
+$("#movie-title-container").on("click", function (event) {
     event.preventDefault();
-    var title = $("#movieTitle").val();
-   findTitle(title)
-   play();
+    let buttonSearch=$(event.target).attr("id")
+    console.log(buttonSearch)
+    findTitle(buttonSearch)
+    //var title = $("#movieTitle").val();
+   //findTitle(title)
+   //play();
 });
 
-//When application opens or screen is refreshed, it will clear previous search & corresponding list, and show buttons for previous titles searched
+// //When application opens or screen is refreshed, it will clear previous search & corresponding list, and show buttons for previous titles searched
 var startPage = function () {
     $("#movie-country-facts").hide()
   
@@ -113,5 +115,3 @@ var startPage = function () {
     })
 }
 startPage();
-
-
