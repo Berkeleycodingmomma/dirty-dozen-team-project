@@ -37,4 +37,10 @@ li.btn {
 
 li::marker {
     display: none;
+<<<<<<< HEAD
+=======
+}
+.right-side{
+    font-size: 30px;
+>>>>>>> 5059bbc79612ca8077fc06872cd96cb677a8ab25
 }
