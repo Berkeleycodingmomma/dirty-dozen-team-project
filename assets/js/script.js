@@ -1,4 +1,3 @@
-//Test that our APIs work. Will remove once js working
 var buttonMovieList=$("#movie-title-container")
 var input=document.getElementById("#movieTitle");
 var apiKey = "kiXeCA7mju1aj5ELXKhqpFu2BsA3SvXljqdqFaNx"
@@ -29,9 +28,8 @@ let options1= {
             //specify we want "country"
             country = data.Country
             console.log(country);
-        //add "country" value to call to api ninja
 
-        
+        //add "country" value to call to api ninja   
     let getCountry = `https://api.api-ninjas.com/v1/country?name=${country.replaceAll(" ", "+")}`
     fetch(getCountry, options)
         .then(res => res.json()) // parse response as JSON
@@ -85,10 +83,10 @@ $("#searchBtn").on("click" || "search", function(event) {
         buttonMovieList.append(appendedButton)
         titleString.push(movieName)
         localStorage.setItem("titleString", JSON.stringify(titleString));
-        findTitle(movieName)//this is not working 
-//         //???????WHAT DO I PUT HERE TO GET IT TO RE-FETCH THAT MOVIES INFORMATION?????
-//     }
-// });
+        findTitle();//this is not working 
+// //         //???????WHAT DO I PUT HERE TO GET IT TO RE-FETCH THAT MOVIES INFORMATION?????
+   }
+ });
 
 //when I click any button it will get the list of 12
 $('.btn').on("click", function (event) {
@@ -98,7 +96,7 @@ $('.btn').on("click", function (event) {
    play();
 });
 
-//When application opens or screen is refreshed, it will clear previous search & corresponding list, and show buttons for previous titles searched
+// //When application opens or screen is refreshed, it will clear previous search & corresponding list, and show buttons for previous titles searched
 var startPage = function () {
     $("#movie-country-facts").hide()
   
@@ -113,5 +111,3 @@ var startPage = function () {
     })
 }
 startPage();
-
-
