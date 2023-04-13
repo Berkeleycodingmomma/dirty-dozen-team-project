@@ -87,8 +87,8 @@ $("#searchBtn").on("click" || "search", function(event) {
         localStorage.setItem("titleString", JSON.stringify(titleString));
         findTitle(movieName)//this is not working 
 //         //???????WHAT DO I PUT HERE TO GET IT TO RE-FETCH THAT MOVIES INFORMATION?????
-//     }
-// });
+    }
+});
 
 //when I click any button it will get the list of 12
 $('.btn').on("click", function (event) {
