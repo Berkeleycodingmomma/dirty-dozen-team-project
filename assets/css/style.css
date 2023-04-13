@@ -30,3 +30,6 @@ li.btn {
 li::marker {
     display: none;
 }
+.right-side{
+    font-size: 30px;
+}
