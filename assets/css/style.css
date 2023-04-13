@@ -8,10 +8,6 @@ body {
 
 }
 
-<<<<<<< HEAD
-=======
-    
->>>>>>> 427c00a9c056e5f5a77425bdf0f3a469a121d986
 .header {
     font-family: fantasy;
     color: #ffd47a;
@@ -56,6 +52,7 @@ li.btn {
     color: white;
     font-family: fantasy;
     font-size: 30px;
+
 }
 
 li::marker {
