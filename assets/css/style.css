@@ -18,7 +18,7 @@ ul {
 li.btn {
     width: 15%;
     display: block;
-    margin: 10 10 10 10;
+    margin-bottom: 25px;
     border-style: line;
     text-align: center;
     border-width: 10px;

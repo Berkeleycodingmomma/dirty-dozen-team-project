@@ -1,6 +1,6 @@
 var elements = document.getElementsByClassName("header");
 var factsElement = document.getElementsByClassName("right-side col-8 flex-d justify-content-space-between");
-
+const countryFacts = document.getElementById("movie-title-container")
 anime({
   targets: elements,
   translateX: 550,
