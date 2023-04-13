@@ -4,15 +4,14 @@ body {
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
+    height: 1500px;
 
 }
 
     
-   
-
 .header {
     font-family: fantasy;
-    color: black;
+    color: #ffd47a;
 }
 
 #searchBtn {
@@ -50,7 +49,7 @@ li.btn {
     border-style: line;
     text-align: center;
     border-width: 10px;
-    background-color: black;
+    background-color:  #c86428;
     color: white;
     font-family: fantasy;
     font-size: 30px;
