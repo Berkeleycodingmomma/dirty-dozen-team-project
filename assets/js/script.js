@@ -95,8 +95,6 @@ $("#movie-title-container").on("click", function (event) {
     let buttonSearch=$(event.target).attr("id")
     console.log(buttonSearch)
     findTitle(buttonSearch)
-    //var title = $("#movieTitle").val();
-   //findTitle(title)
    //play();
 });
 
