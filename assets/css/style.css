@@ -4,11 +4,17 @@ body {
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
+    height: 1500px;
 
 }
 
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 427c00a9c056e5f5a77425bdf0f3a469a121d986
 .header {
     font-family: fantasy;
+    color: #ffd47a;
 }
 
 #searchBtn {
@@ -46,7 +52,7 @@ li.btn {
     border-style: line;
     text-align: center;
     border-width: 10px;
-    background-color: black;
+    background-color:  #c86428;
     color: white;
     font-family: fantasy;
     font-size: 30px;
