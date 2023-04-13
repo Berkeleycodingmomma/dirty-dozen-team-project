@@ -1,4 +1,40 @@
-body {
-   background-image: url(./assets/);
-  background-size: contain;
+/* body {
+    background-image: url(../images/movie\ img\ 1.jpeg);
+    background-size: auto;
+} */
+
+#searchBtn {
+    width: 20%;
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    color: white;
+    background-color: black;
+    font-size: 20px;
+}
+
+#movieName {
+    margin-left: 10px;
+    width: 50%;
+}
+
+ul {
+    margin-right: 30px;
+}
+
+li.btn {
+    width: 15%;
+    display: block;
+    margin: 10 10 10 10;
+    border-style: line;
+    text-align: center;
+    border-width: 10px;
+    background-color: darkslategray;
+    color: white;
+    font-size: 30px;
+}
+
+li::marker {
+    display: none;
 }
