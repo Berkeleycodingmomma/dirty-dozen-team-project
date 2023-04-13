@@ -95,9 +95,9 @@ $("#movie-title-container").on("click", function (event) {
     let buttonSearch=$(event.target).attr("id")
     console.log(buttonSearch)
     findTitle(buttonSearch)
-    //var title = $("#movieTitle").val();
-   //findTitle(title)
-   //play();
+    var title = $("#movieTitle").val();
+   findTitle(title)
+   play();
 });
 
 // //When application opens or screen is refreshed, it will clear previous search & corresponding list, and show buttons for previous titles searched
