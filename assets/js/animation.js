@@ -1,5 +1,5 @@
 var elements = document.getElementsByClassName("header");
-var factsElement = document.getElementsByClassName("right-side col-8 flex-d justify-content-space-between");
+var factsElement = document.getElementsByClassName("anime");
 
 anime({
   targets: elements,
