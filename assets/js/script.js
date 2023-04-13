@@ -89,11 +89,13 @@ $("#searchBtn").on("click" || "search", function(event) {
 });
 
 //when I click any button it will get the list of 12
-$('.btn').on("click", function (event) {
+$('.buttonMovieList').on("click", function (event) {
     event.preventDefault();
-    var title = $("#movieTitle").val();
-   findTitle(title)
-   play();
+    let buttonSearch=$(event.target).attr("id")
+    findTitle(title)
+    //var title = $("#movieTitle").val();
+   //findTitle(title)
+   //play();
 });
 
 // //When application opens or screen is refreshed, it will clear previous search & corresponding list, and show buttons for previous titles searched
