@@ -70,7 +70,25 @@ function displayList(countryData) {
 }
 
 
-// };
+$("#searchBtn").on("click" || "search", function(event) {
+    event.preventDefault();
+    var movieName =$("#movieTitle").val();
+    var titleString = JSON.parse(localStorage.getItem("titleString")) || [];
+    if (!movieName){
+        alert ("REPLACE THIS ALERT WITH A MODAL.")
+        //this needs to be replaced with a modal//
+    }else {
+        var appendedButton=$(("<li></li>"))
+        appendedButton.text(movieName)
+        appendedButton.attr("id", movieName)
+        appendedButton.addClass("movie btn btn-block")
+        buttonMovieList.append(appendedButton)
+        titleString.push(movieName)
+        localStorage.setItem("titleString", JSON.stringify(titleString));
+        findTitle(movieName)//this is not working 
+//         //???????WHAT DO I PUT HERE TO GET IT TO RE-FETCH THAT MOVIES INFORMATION?????
+    }
+});
 
 //when I click any button it will get the list of 12
 $('.btn').on("click", function (event) {
