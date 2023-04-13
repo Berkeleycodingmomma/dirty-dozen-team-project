@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css"/>
     <script src="./assets/anime-master/lib/anime.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css"/>
     <title>Dirty Dozen</title>
 </head>
 
@@ -19,25 +19,30 @@
     <!--Big box that has everything under title in it-->
     <main class="container">
 
-        <!--Container of everything to the left on the screen at full size with the search button and list of previously searched titles-->
-        <aside id="left-side" class="col-12 col-md-4">
+        <!--Container of everything to the left on the screen at full size with
+             the search button and list of previously searched titles-->
+        <aside id="left-side" class="left-side">
             <!--Box with the search button-->
             <h2 id="enterMovie">ENTER MOVIE TITLE HERE:</h2>
             <input type="text" id="movieTitle" class="movieTitle"></input>
-            <button id="searchBtn" type="button" class="btn btn-block">SEARCH</button>
-
-            <hr>
+            <button id="searchBtn" type="button" class="btn">SEARCH</button>
+            <!--NEED TO USE DIFFERENT CSS FOR "btn" BECAUSE IT IS BOOTSTRAP-->
+            <!--NEED TO SEPARATE OUT THE INDIVIDUAL BUTTONS OR USE WHITE BACKGROUND WITH NO BORDER-->
 
             <!--Box with the list of previously viewed titles-->
             <div>
-                <h2 id="prevTitles">Previously chosen titles:</h2>
-                <ul id="movie-title-container" class="btn btn-block"></ul>
+                <!--<h2 id="prevTitles">Previously chosen titles:</h2>-->
+                <ul id="movie-title-container" class="btn"></ul>
+                <!--NEED TO USE DIFFERENT CSS FOR "btn" BECAUSE IT IS BOOTSTRAP-->
+                <!--MAY AFFECT THE JS SO LET"S PLAN ACCORDINGLY-->
+
             </div>
         </aside>
 
-        <!--Everything to the right on the screen at full size. Will nest under boxes to the right when screen shrinks/mobile phone use -->
-        <div class="right-side col-8 flex-d justify-content-space-between">
-            <section id="movie-country-facts" class="col-12 col-md-8">
+        <!--Everything to the right on the screen at full size. 
+            Will nest under boxes to the right when screen shrinks/mobile phone use -->
+        <div class="right-side">
+            <section id="movie-country-facts" class="movie-country-facts">
                 <p id="country-name"></p>
                 <p id="capital"></p>
                 <p id="population"></p>

@@ -1,17 +1,11 @@
 //Test that our APIs work. Will remove once js working
-
-var input=document.getElementById("movieTitle");
+var buttonMovieList=$("#movie-title-container")
+var input=document.getElementById("#movieTitle");
 var apiKey = "kiXeCA7mju1aj5ELXKhqpFu2BsA3SvXljqdqFaNx"
 let countryData = [];
 let country;
 
-$('.btn').on("click", function (event) {
-    event.preventDefault();
-    var title = $("#movieTitle").val();
-   findTitle(title)
-   play();
-});
-
+//Needed for call to Ninja API
 let options = {
     method: 'GET',
     headers: {
@@ -23,33 +17,34 @@ let findTitle=function(title) {
 console.log(title)
 
 let options1= {
-    method: 'GET',
+ method: 'GET',
 }
 //Call to omdb
-var omdbKey = "b0f2dca4"
-let getMovie="http://www.omdbapi.com/?apikey=" + omdbKey + "&t=" + title
-console.log(getMovie);
-fetch(getMovie, options1)
-    .then(res => res.json()) // parse response as JSON
-    .then(data => {
-        console.log(data);
-        //specify we want "country"
-         country = data.Country
-        console.log(country);
+    var omdbKey = "b0f2dca4"
+    let getMovie="http://www.omdbapi.com/?apikey=" + omdbKey + "&t=" + title
+    fetch(getMovie, options1)
+        .then(res => res.json()) // parse response as JSON
+        .then(data => {
+            console.log(data);
+            //specify we want "country"
+            country = data.Country
+            console.log(country);
         //add "country" value to call to api ninja
-        let url = `https://api.api-ninjas.com/v1/country?name=${country.replaceAll(" ", "+")}`
-        fetch(url, options)
-            .then(res => res.json()) // parse response as JSON
-            .then(countryData => {
-                console.log(countryData)
-                displayList(countryData)
+
+        
+    let getCountry = `https://api.api-ninjas.com/v1/country?name=${country.replaceAll(" ", "+")}`
+    fetch(getCountry, options)
+        .then(res => res.json()) // parse response as JSON
+        .then(countryData => {
+            console.log(countryData)
+            displayList(countryData)
             })
             .catch(err => {
                 console.log(`error ${err}`)
             }) 
          })
-    }
-
+        }
+    
    //now parse out that information to complete our list of 12
 function displayList(countryData) {
     let capital 
@@ -58,6 +53,7 @@ function displayList(countryData) {
     } else {
         capital = "No Capital Found"
     }
+    $("#movie-country-facts").show();
     $("#movie-country-facts").children().eq(0).text("12 Random Facts About:  " + country);
     $("#movie-country-facts").children().eq(1).text("1. Capital:   " + capital);
     $("#movie-country-facts").children().eq(2).text("2. Population:   " + countryData[0].population + " million");
@@ -74,42 +70,48 @@ function displayList(countryData) {
 }
 
 
+$("#searchBtn").on("click" || "search", function(event) {
+    event.preventDefault();
+    var movieName =$("#movieTitle").val();
+    var titleString = JSON.parse(localStorage.getItem("titleString")) || [];
+    if (!movieName){
+        alert ("REPLACE THIS ALERT WITH A MODAL.")
+        //this needs to be replaced with a modal//
+    }else {
+        var appendedButton=$(("<li></li>"))
+        appendedButton.text(movieName)
+        appendedButton.attr("id", movieName)
+        appendedButton.addClass("movie btn btn-block")
+        buttonMovieList.append(appendedButton)
+        titleString.push(movieName)
+        localStorage.setItem("titleString", JSON.stringify(titleString));
+        findTitle(movieName)//this is not working 
+//         //???????WHAT DO I PUT HERE TO GET IT TO RE-FETCH THAT MOVIES INFORMATION?????
+//     }
+// });
 
-// var startPage = function () {
-//     $("#movie-country-facts").hide()
+//when I click any button it will get the list of 12
+$('.btn').on("click", function (event) {
+    event.preventDefault();
+    var title = $("#movieTitle").val();
+   findTitle(title)
+   play();
+});
 
-//     var titleString=JSON.parse(localStorage.getItem("titleString")) || [];
-//     titleString.forEach(function (title) {
-//         var appendedButton=$(("<li></li>"))
-//         appendedButton.text(title)
-//         appendedButton.attr("id", title)
-//         appendedButton.addClass("movie btn btn-block")
-//         var buttonMovieList=$("#movie-title-container")
-//         buttonMovieList.append(appendedButton)
-//     })
-// }
-// startPage();
-
-
-// // $("#searchBtn").on("click" || "search", function(event) {
-// //     event.preventDefault();
-// //     var movieTitle =$("#movieTitle").val();
-// //     var titleString = JSON.parse(localStorage.getItem("titleString")) || [];
-// //     if (!movieTitle){
-// //         alert ("Please enter a movie name.")
-// //         //this needs to be replaced with a modal//
-// //     }else {
-// //         var appendedButton=$(("<li></li>"))
-// //         appendedButton.text(title)
-// //         appendedButton.attr("id", title)
-// //         appendedButton.addClass("movie btn btn-block")
-// //         var buttonMovieList=$("#movie-title-container")
-// //         buttonMovieList.append(appendedButton)
-// //         titleString.push(movieTitle)
-// //         localStorage.setItem("titleString", JSON.stringify(titleString));
-// //         findTitle(movieTitle);
-// //     }
-// // });
-
+//When application opens or screen is refreshed, it will clear previous search & corresponding list, and show buttons for previous titles searched
+var startPage = function () {
+    $("#movie-country-facts").hide()
+  
+    var titleString=JSON.parse(localStorage.getItem("titleString")) || [];
+    titleString.forEach(function (getTitle) {
+        var appendedButton=$(("<li></li>"))
+        appendedButton.text(getTitle)
+        appendedButton.attr("id", getTitle)
+        appendedButton.addClass("movie btn btn-block")
+        var buttonMovieList=$("#movie-title-container")
+        buttonMovieList.append(appendedButton)
+    })
+}
+startPage();
 
 
