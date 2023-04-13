@@ -1,3 +1,19 @@
+body {
+    background-image: url(../images/movie\ img\ 1.jpeg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+    
+   
+
+.header {
+    font-family: fantasy;
+}
+
 #searchBtn {
     width: 20%;
     display: block;
@@ -5,16 +21,27 @@
     margin-left: 10px;
     margin-bottom: 5px;
     color: white;
-    background-color: black ;
+    background-color: #c86428;
+    font-family: fantasy;
     font-size: 20px;
 }
+
 #movieName {
     margin-left: 10px;
     width: 50%;
+    font-family: fantasy;
 }
+
+h2 {
+    font-family: fantasy;
+    font-weight: bold;
+}
+
 ul {
     margin-right: 30px;
+    font-family: fantasy;
 }
+
 li.btn {
     width: 15%;
     display: block;
@@ -22,14 +49,17 @@ li.btn {
     border-style: line;
     text-align: center;
     border-width: 10px;
-    background-color: darkslategray;
+    background-color: black;
     color: white;
+    font-family: fantasy;
     font-size: 30px;
-} 
+}
 
 li::marker {
     display: none;
+    font-family: fantasy;
 }
 .right-side{
     font-size: 30px;
+    font-family: fantasy;
 }
