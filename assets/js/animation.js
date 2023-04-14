@@ -3,7 +3,7 @@ var elements = document.getElementsByClassName("header");
 
 anime({
   targets: elements,
-  translateX: 550,
+  translateX: 560,
   easing: 'linear',
   duration: 3000
 });
@@ -11,8 +11,8 @@ anime({
 anime({
     targets: '.left-side',
     translateX: [
-      { value: -500, duration: 500, delay: 2500 },
-      { value: -500, duration: 500, delay: 2500 }
+      { value: 100, duration: 500, delay: 2500 },
+      { value: 100, duration: 500, delay: 2500 }
     ],
     translateY: [
       { value: 50, duration: 500 },
