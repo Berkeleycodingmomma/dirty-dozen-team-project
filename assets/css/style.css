@@ -101,3 +101,27 @@ color: Black;
 font-family: 'Luckiest Guy';
 width: 600px;
 }
+/* 
+$breakpoint: 1280px;
+
+.body {
+  @include until($breakpoint) {
+    
+  }
+
+  @include from($breakpoint) {
+   
+  }
+} */
+/* 
+@media screen and (max-width: 1279px) {
+    .my-element {
+      background: green;
+    }git 
+  }
+  
+  @media screen and (min-width: 1280px) {
+    .my-element {
+      background: orange;
+    }
+  } */

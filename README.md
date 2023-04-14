@@ -16,7 +16,11 @@ anime: https://animejs.com/
 
 
 ## Description 
-The User will type a movie title in the search box.  Next they will click the search button. It will then bring up twelve intresting facts about the country that particular movie was filmed in. it will store the tittle to the left of the page under the search button for user to click on again if needed and it will brign up the 12 facts again. 
+The User will type a movie title in the search box.  Next they will click the search button. It will then bring up twelve intresting facts about the country that the particular movie was filmed in. It will store the tittle to the left for the user to see on the side of the page under the search button if user wants to click on again, and is so it will bring up the 12 facts again. 
+
+## Visual image of our Deplloyed site
+
+![Alt text](./assets/images/Screen%20Shot%202023-04-14%20at%201.48.45%20PM.png)
 
 
 
@@ -98,6 +102,8 @@ body {
 ```
 
 ## Credits
+
+Shout out to all the TA's and Google Search!
 
 
 
