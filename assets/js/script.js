@@ -25,7 +25,7 @@ let options1= {
 }
 //Call to omdb
     var omdbKey = "b0f2dca4"
-    let getMovie="http://www.omdbapi.com/?apikey=" + omdbKey + "&t=" + title
+    let getMovie="https://www.omdbapi.com/?apikey=" + omdbKey + "&t=" + title
     fetch(getMovie, options1)
         .then(res => res.json()) // parse response as JSON
         .then(data => {
@@ -102,7 +102,7 @@ $("#movie-title-container").on("click", function (event) {
     let buttonSearch=$(event.target).attr("id")
     console.log(buttonSearch, "buttonSearch")
     findTitle(buttonSearch)
-   //play();
+    play();
 });
 
 // //When application opens or screen is refreshed, it will clear previous search & corresponding list, and show buttons for previous titles searched
