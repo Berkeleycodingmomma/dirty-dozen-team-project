@@ -63,6 +63,7 @@ The User will type a movie title in the search box.  Next they will click the se
 ```
 
 **(ABOVE)- We used "Bulma" to size our fonts and spacing.
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 ```sh
 
@@ -102,9 +103,13 @@ body {
 ```
 
 ## Credits
+<<<<<<< HEAD
 
 Shout out to all the TA's and Google Search!
 
+=======
+GOOGLE!  Seriously, thank you google search!
+>>>>>>> 78cf9f68f985dbcd0106f61de924ff4e4e03a882
 
 
 
