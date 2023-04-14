@@ -5,6 +5,10 @@ let countryData = [];
 let country;
 let appendedButton;
 
+var names = 'Harry,John,Clark,Peter,Rohn,Alice';
+var nameArr = names.split(',');
+console.log(nameArr);
+
 //Needed for call to Ninja API
 let options = {
     method: 'GET',
@@ -28,10 +32,14 @@ let options1= {
             console.log(data);
             //specify we want "country"
             country = data.Country
-            console.log(country);
+            var oneCountry= country.split(',')
+            console.log(oneCountry[0], "This is our country");
+            //console.log(country.split(','));
 
-        //add "country" value to call to api ninja   
-    let getCountry = `https://api.api-ninjas.com/v1/country?name=${country.replaceAll(" ", "+")}`
+
+        //add "country" value to call to api ninja 
+      
+    let getCountry = `https://api.api-ninjas.com/v1/country?name=${oneCountry[0].replaceAll(" ", "+")}`
     fetch(getCountry, options)
         .then(res => res.json()) // parse response as JSON
         .then(countryData => {
@@ -63,7 +71,7 @@ function displayList(countryData) {
     $("#movie-country-facts").children().eq(7).text("7. Women Enrolled in Secondary Education:   " + countryData[0].secondary_school_enrollment_female + "%");
     $("#movie-country-facts").children().eq(8).text("8. Men Enrolled in Secondary Education:   " + countryData[0].secondary_school_enrollment_male + "%");
     $("#movie-country-facts").children().eq(9).text("9. Forested Area:   " + countryData[0].forested_area +"% of all area");
-    $("#movie-country-facts").children().eq(10).text("10. Threatened Species:   " + countryData[0].threatened_species + " species are endangered here.");
+    $("#movie-country-facts").children().eq(10).text("10. Threatened Species:   " + countryData[0].threatened_species);
     $("#movie-country-facts").children().eq(11).text("11. Life Expectancy Female:  " + countryData[0].life_expectancy_female + " Years of Age");
     $("#movie-country-facts").children().eq(12).text("12. Life Expectancy Male:   " + countryData[0].life_expectancy_male + " Years of Age");
 }
@@ -84,8 +92,7 @@ $("#searchBtn").on("click" || "search", function(event) {
         buttonMovieList.append(appendedButton)
         titleString.push(movieName)
         localStorage.setItem("titleString", JSON.stringify(titleString));
-        findTitle(movieName)//this is not working 
-//         //???????WHAT DO I PUT HERE TO GET IT TO RE-FETCH THAT MOVIES INFORMATION?????
+        findTitle(movieName)
     }
 });
 
@@ -93,7 +100,7 @@ $("#searchBtn").on("click" || "search", function(event) {
 $("#movie-title-container").on("click", function (event) {
     event.preventDefault();
     let buttonSearch=$(event.target).attr("id")
-    console.log(buttonSearch)
+    console.log(buttonSearch, "buttonSearch")
     findTitle(buttonSearch)
    //play();
 });
