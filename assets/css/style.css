@@ -5,70 +5,99 @@ body {
     background-size: cover;
     background-attachment: fixed;
     height: 1500px;
-
-
 }
-
-
+.container {
+    display: flex;
+    width: 100%;
+    
+}
 .header {
-    font-family: fantasy;
-    color: black;
     font-weight: bold;
     height: 100px;
-    padding-top: 60px;
+    padding-top: 50px;
 }
 
+.title {
+    display: flex;
+    color: #241B1B;
+    font-family: 'sedgwick ave display';
+    font-size: 90px;
+}
+.subtitle {
+    display: flex;
+    font-family: 'righteous';
+    font-size: 45px;
+    color: whitesmoke;
+    font-weight: bold;
+}
+#movieTitle {
+    width: 48%;
+    height: 50px;
+    background-color: #EFE2B5;
+    font-size: 20px;
+    font-family:'Courier New', Courier, monospace;
+}
 #searchBtn {
-    width: 10%;
+    width: 48%;
     display: block;
     margin-top: 10px;
-    margin-left: 10px;
     margin-bottom: 5px;
-    color: white;
+    color: #EFE2B5;
     background-color: black;
-    font-family: fantasy;
+    font-family: 'sigmar one';
     font-size: 20px;
 }
-
-/* #movieName {
-    margin-left: 0px;
-    width: 25%;
-    font-family: fantasy;
-    
-} */
-
-h2 {
-    font-family: fantasy;
-    font-weight: bold;
-    font-size: 30px;
+#enterMovie {
+    color: black;
+    margin-right: 200px;
+    margin-top: 125px;
+    font-family: 'Luckiest Guy';
+    font-size: 25px;
 }
 
-
+#prevTitles {
+    color: black;
+    margin-top: 40px;
+    font-family: 'Luckiest Guy';
+    font-size: 35px;
+}
 li.btn {
-    width: 25%;
+    width: 50%;
     display: block;
-    margin-right: 25px;
+   
     margin-bottom: 25px;
-    border-style: line;
+    border-style: line black;
     text-align: center;
     border-width: 10px;
     background-color: #c86428;
-    color: #e3cc6a;
-    font-family: fantasy;
+    color: #EFE2B5;
+    font-family: 'sedgwick ave display';
     font-size: 30px;
 }
-
 li::marker {
     display: none;
     font-family: fantasy;
-
 }
-
-.right-side {
-    font-size: 30px;
-    font-family: fantasy;
-}
-
-/* .left-side {
+.left-side {
+    margin-right: 200px;
     width: 500px;
-} */
+    margin-top: 45px;
+}
+.right-side {
+    width: 600px;
+    margin-right: 125px;
+    margin-top: 215px;
+}
+#movie-country-facts {
+color: whitesmoke;
+font-weight: bold;
+font-family:'Courier New', Courier, monospace;
+width: 600px;
+font-size: 20px;
+}
+#country-name {
+font-size: 32px;
+color: Black;
+font-family: 'Luckiest Guy';
+width: 600px;
+}

@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./assets/anime-master/lib/anime.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Luckiest+Guy&family=Righteous&family=Sedgwick+Ave+Display&family=Sigmar+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Dirty Dozen</title>
@@ -16,16 +18,14 @@
 <body>
     <!--Box at the top with app title and statement/directions-->
     <header class="header">
-        <!-- <h1 id="title col">The Dirty Dozen: </h1> -->
-        <h1 class="title is-1 is-spaced 5 has-text-warning-light">The Dirty Dozen:</h1>
-        <p class="subtitle is-3 is-spaced 3  has-text-warning-light"> 12 Random Facts About the Country Your Movie was
+        <h1 class="title is-spaced 5">The Dirty Dozen:</h1>
+        <p class="subtitle is-3 is-spaced 3"> 12 Random Facts About the Country Your Movie was
             Filmed In</p>
-        <!-- <p id="title-description">12 Random Facts About the Country Your Movie was Filmed In</p>
-    </header> -->
+    </header>
 
         <!--Big box that has everything under title in it-->
         <main class="container">
-            
+        
             <!--Container of everything to the left on the screen at full size with
              the search button and list of previously searched titles-->
             <aside id="left-side" class="left-side">
@@ -34,17 +34,14 @@
                 <input type="text" id="movieTitle" class="movieTitle"></input>
                 <button id="searchBtn" type="button" class="btn">SEARCH</button>
 
-
+            
                 <!--Box with the list of previously viewed titles-->
                 <div>
-                    <!--<h2 id="prevTitles">Previously chosen titles:</h2>-->
+                    <h2 id="prevTitles">NOW ON VIDEO:</h2>
                     <ul id="movie-title-container" class="btn"></ul>
-                    <!--NEED TO USE DIFFERENT CSS FOR "btn" BECAUSE IT IS BOOTSTRAP-->
-                    <!--MAY AFFECT THE JS SO LET"S PLAN ACCORDINGLY-->
-
                 </div>
             </aside>
-
+        
             <!--Everything to the right on the screen at full size. 
             Will nest under boxes to the right when screen shrinks/mobile phone use -->
             <div class="right-side columns is-mobile">
