@@ -5,9 +5,6 @@ let countryData = [];
 let country;
 let appendedButton;
 
-var names = 'Harry,John,Clark,Peter,Rohn,Alice';
-var nameArr = names.split(',');
-console.log(nameArr);
 
 //Needed for call to Ninja API
 let options = {
