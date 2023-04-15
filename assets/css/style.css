@@ -115,12 +115,34 @@ font-family: 'Luckiest Guy';
 width: 600px;
 }
 
+/* 
+/* @media  and (max-width: 768px) {
+    .container{
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+    
+}
 
 
+@media  and (min-width: 450px) {
+    .container{
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+     */
+/* } */ 
 
-
-
-
+/* @media screen and (min-width: 480px) {
+    .container {
+        width: 200px;
+        float: left;
+    }
+     .container {
+        margin-left: 216px;
+    }
+} 
+ */
 
 
 
