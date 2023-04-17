@@ -92,7 +92,13 @@ body {
 
 ```
 **(ABOVE)- We added a background pictures
-screen-capture (2).webm
+
+```sh
+![Alt text](./assets/images/screen-capture%20(2).webm)
+
+```
+
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Author Info
@@ -104,13 +110,9 @@ screen-capture (2).webm
 ```
 
 ## Credits
-<<<<<<< HEAD
 
 Shout out to all the TA's and Google Search!
 
-=======
-GOOGLE!  Seriously, thank you google search!
->>>>>>> 78cf9f68f985dbcd0106f61de924ff4e4e03a882
 
 
 

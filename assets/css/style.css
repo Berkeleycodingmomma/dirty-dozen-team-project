@@ -5,26 +5,18 @@ body {
     background-size: cover;
     background-attachment: fixed;
     height: 1500px;
+
 }
 
-/* display: flex;
-flex-direction: column;
-min-height: 100%;
-text-align: center;
-width: 100%;
-height: 100vh;
-background: linear-gradient(to right, #F2651C 0%, #FFD700 50%, #FFD700 50%, #008DD2 100%);
-background-size: 100%;
-background-position: center top, center bottom;
-background-repeat: no-repeat;
-} */
 
-.container {
+ .container {
     display: flex;
     width: 100%;
-    
+
 }
+
 .header {
+    transform: translateX(128px);
     font-weight: bold;
     height: 100px;
     padding-top: 50px;
@@ -36,6 +28,7 @@ background-repeat: no-repeat;
     font-family: 'sedgwick ave display';
     font-size: 90px;
 }
+
 .subtitle {
     display: flex;
     font-family: 'righteous';
@@ -43,13 +36,15 @@ background-repeat: no-repeat;
     color: whitesmoke;
     font-weight: bold;
 }
+
 #movieTitle {
     width: 48%;
     height: 50px;
     background-color: #EFE2B5;
     font-size: 20px;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
 }
+
 #searchBtn {
     width: 48%;
     display: block;
@@ -60,6 +55,7 @@ background-repeat: no-repeat;
     font-family: 'sigmar one';
     font-size: 20px;
 }
+
 #enterMovie {
     color: black;
     margin-right: 200px;
@@ -74,10 +70,11 @@ background-repeat: no-repeat;
     font-family: 'Luckiest Guy';
     font-size: 35px;
 }
+
 li.btn {
     width: 50%;
     display: block;
-   
+
     margin-bottom: 25px;
     border-style: line black;
     text-align: center;
@@ -87,86 +84,51 @@ li.btn {
     font-family: 'sedgwick ave display';
     font-size: 30px;
 }
+
 li::marker {
     display: none;
     font-family: fantasy;
 }
+
 .left-side {
     margin-right: 200px;
     width: 500px;
     margin-top: 45px;
 }
+
 .right-side {
     width: 600px;
     margin-right: 125px;
     margin-top: 215px;
 }
+
 #movie-country-facts {
-color: whitesmoke;
-font-weight: bold;
-font-family:'Courier New', Courier, monospace;
-width: 600px;
-font-size: 20px;
+    color: whitesmoke;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    width: 600px;
+    font-size: 20px;
 }
+
 #country-name {
-font-size: 32px;
-color: Black;
-font-family: 'Luckiest Guy';
-width: 600px;
-}
-
-/* 
-/* @media  and (max-width: 768px) {
-    .container{
-        display: flex;
-        flex-wrap: wrap-reverse;
-    }
-    
+    font-size: 32px;
+    color: Black;
+    font-family: 'Luckiest Guy';
+    width: 600px;
 }
 
 
-@media  and (min-width: 450px) {
-    .container{
-        display: flex;
-        flex-wrap: wrap-reverse;
-    }
-     */
-/* } */ 
+@media screen and (max-width: 870px) {
 
-/* @media screen and (min-width: 480px) {
-    .container {
-        width: 200px;
-        float: left;
+    .header {
+        transform: translateX(95px);
     }
-     .container {
-        margin-left: 216px;
+    .subtitle {
+        width: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
+
 } 
- */
-
-
-
-
-/* $breakpoint: 1400px;
-
-.container {
-  @include until(1278px) {
-    
-  }
-
-  @include from(1280px) {
-   
-  }
-} 
-
-
-@media screen and (min-width: 1280px) {
-    .container {
-     
-    }
-  }
-  @media screen and (max-width: 600px) {
-    .button {
-   
-    }
-  } */
