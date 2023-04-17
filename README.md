@@ -93,11 +93,20 @@ body {
 ```
 **(ABOVE)- We added a background pictures
 
+
 ```sh
 ![Alt text](./assets/images/screen-capture%20(2).webm)
 
 ```
 
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## A GIF of our page load showing the animation of our page loading and a search resulting in a list of 12 random facts.
+
+
+[screen-capture (2).webm](https://user-images.githubusercontent.com/128196644/232180341-b63a7117-5b80-4e32-8342-dc7435e1f979.webm)
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -112,6 +121,9 @@ body {
 ## Credits
 
 Shout out to all the TA's and Google Search!
+
+GOOGLE!  Seriously, thank you google search!
+
 
 
 
